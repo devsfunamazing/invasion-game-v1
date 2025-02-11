@@ -112,7 +112,17 @@ function movePlayer() {
 
 /**
  * Function Shoot
+ * 
  */
 function shoot() {
-    bullets.push({})
+    bullets.push({
+        x: player.x + (player.width / 2) - 2,
+        y: player.y,
+        width: 5,
+        height: 10,
+        speed: 5
+    })
+
+    // Jouer le son lors du tire
+    shootSound.play()
 }
